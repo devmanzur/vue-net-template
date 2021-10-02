@@ -75,8 +75,8 @@ namespace AspNetCoreVueStarter
 
                 spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment())
-                {
+                // if (env.IsDevelopment())
+                // {
 
                     // run npm process with client app
                     if (mode == "start") {
@@ -89,7 +89,7 @@ namespace AspNetCoreVueStarter
                     if (mode == "attach") {
                         spa.UseProxyToSpaDevelopmentServer($"{(https ? "https" : "http")}://localhost:{port}"); // your Vue app port
                     }
-                }
+                // }
             });
         }
     }
